@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="DelphiMobile"/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>2016/09/19 20:28:30.000.810,C:\Projetos\Cursos\MongoDB Com Delphi\uFrmClientes.fmx=C:\Projetos\Cursos\MongoDB Com Delphi\uFrmCadastroClientes.fmx</Transaction>
+    <Transaction>2016/09/19 22:11:24.000.418,C:\Projetos\Cursos\MongoDB Com Delphi\uFrmFaturamento.fmx=C:\Projetos\Cursos\MongoDB Com Delphi\Unit1.fmx</Transaction>
+    <Transaction>2016/09/20 20:27:56.000.612,C:\Projetos\Cursos\MongoDB Com Delphi\Unit1.fmx=C:\Projetos\Cursos\MongoDB Com Delphi\uFrmCadastroProfissionais.fmx</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,53 @@
+object frmMensagemPadrao: TfrmMensagemPadrao
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 91
+  ClientWidth = 640
+  StyleBook = frmPrincipal.StyleBook1
+  StyleLookup = 'panelstylesucesso'
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object layoutMensagem: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 91.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Panel1: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 91.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lbTitulo: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 620.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        Text = 'Titulo'
+      end
+      object lbMensagem: TLabel
+        Align = Client
+        Margins.Left = 15.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 15.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 610.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'lbMensagem'
+      end
+    end
+  end
+end

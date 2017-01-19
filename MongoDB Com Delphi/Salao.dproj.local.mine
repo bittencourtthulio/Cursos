@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/08/06 16:51:17.000.738,C:\Projetos\ufrmPrincipal.fmx=C:\Users\Thulio\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2016/08/06 16:51:27.000.614,C:\Projetos\Salao\Salao.dproj=C:\Users\Thulio\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2016/08/06 16:51:39.000.845,C:\Projetos\Salao\ufrmPrincipal.pas=C:\Projetos\ufrmPrincipal.pas</Transaction>
+    <Transaction>2016/08/06 16:51:39.000.845,C:\Projetos\Salao\ufrmPrincipal.fmx=C:\Projetos\ufrmPrincipal.fmx</Transaction>
+    <Transaction>2016/08/06 16:52:55.000.407,C:\Projetos\Salao\uFrmCadastroPadrao.fmx=C:\Projetos\Salao\Unit2.fmx</Transaction>
+    <Transaction>2016/08/06 16:58:20.000.526,C:\Projetos\Salao\uFrmCadastroServicos.fmx=C:\Projetos\Salao\Unit1.fmx</Transaction>
+    <Transaction>2016/08/06 17:02:29.000.913,C:\Projetos\Salao\uDmDados.dfm=C:\Projetos\Salao\Unit1.dfm</Transaction>
+    <Transaction>2016/08/27 13:50:50.000.096,C:\Projetos\Salao Aula - Copia\uFrmClientes.fmx=C:\Projetos\Salao Aula - Copia\Unit1.fmx</Transaction>
+    <Transaction>2016/09/16 19:31:16.000.685,C:\Projetos\Cursos\MongoDB Com Delphi\Unit1.fmx=C:\Projetos\Cursos\MongoDB Com Delphi\uFrmMensagensPadrao.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

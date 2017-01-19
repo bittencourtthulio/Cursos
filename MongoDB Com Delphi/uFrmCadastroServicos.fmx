@@ -1,0 +1,194 @@
+inherited frmCadastroServico: TfrmCadastroServico
+  Caption = 'Cadastro de Servi'#231'os'
+  DesignerMasterStyle = 0
+  inherited Layout1: TLayout
+    inherited ToolBar1: TToolBar
+      inherited Label1: TLabel
+        Text = 'Cadastro de Servi'#231'os'
+      end
+    end
+    inherited TabControl1: TTabControl
+      TabOrder = 7
+      Sizes = (
+        678s
+        337s
+        678s
+        337s)
+      inherited tabLista: TTabItem
+        ExplicitSize.cx = 62.000000000000000000
+        ExplicitSize.cy = 23.000000000000000000
+        inherited ListBox1: TListBox
+          Size.Width = 678.000000000000000000
+          Size.Height = 337.000000000000000000
+          Viewport.Width = 674.000000000000000000
+          Viewport.Height = 293.000000000000000000
+          inherited ListBoxItem1: TListBoxItem
+            Size.Width = 674.000000000000000000
+          end
+          inherited SearchBox1: TSearchBox
+            Size.Width = 674.000000000000000000
+          end
+        end
+      end
+      inherited tabCadastro: TTabItem
+        ExplicitSize.cx = 85.000000000000000000
+        ExplicitSize.cy = 23.000000000000000000
+        inherited ListBox2: TListBox
+          Size.Width = 678.000000000000000000
+          Size.Height = 337.000000000000000000
+          Viewport.Width = 674.000000000000000000
+          Viewport.Height = 333.000000000000000000
+          object ListBoxItem2: TListBoxItem
+            Padding.Left = 5.000000000000000000
+            Padding.Top = 5.000000000000000000
+            Padding.Right = 5.000000000000000000
+            Padding.Bottom = 5.000000000000000000
+            Size.Width = 674.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label2: TLabel
+              Align = Left
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 10.000000000000000000
+              Position.X = 15.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              Text = 'C'#243'digo:'
+            end
+            object EditMongo1: TMongoEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 1
+              Size.Width = 534.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              MongoTipoCampo = Numerico
+              MongoCampo = 'CODIGO'
+              AutoInc = True
+              CampoChave = True
+            end
+          end
+          object ListBoxItem3: TListBoxItem
+            Padding.Left = 5.000000000000000000
+            Padding.Top = 5.000000000000000000
+            Padding.Right = 5.000000000000000000
+            Padding.Bottom = 5.000000000000000000
+            Position.Y = 50.000000000000000000
+            Size.Width = 674.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label3: TLabel
+              Align = Left
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 10.000000000000000000
+              Position.X = 15.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              Text = 'Descri'#231#227'o:'
+            end
+            object EditMongo2: TMongoEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 1
+              Size.Width = 534.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              MongoCampo = 'DESCRICAO'
+              AutoInc = False
+              CampoChave = False
+            end
+          end
+          object ListBoxItem4: TListBoxItem
+            Padding.Left = 5.000000000000000000
+            Padding.Top = 5.000000000000000000
+            Padding.Right = 5.000000000000000000
+            Padding.Bottom = 5.000000000000000000
+            Position.Y = 100.000000000000000000
+            Size.Width = 674.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object Label4: TLabel
+              Align = Left
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 10.000000000000000000
+              Position.X = 15.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              Text = 'Valor:'
+            end
+            object EditMongo3: TMongoEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 1
+              Size.Width = 534.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              MongoTipoCampo = Moeda
+              MongoCampo = 'VALOR'
+              AutoInc = False
+              CampoChave = False
+            end
+          end
+        end
+      end
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      Align = Right
+      Position.X = 344.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 334.000000000000000000
+      Size.Height = 360.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Visible = False
+      Viewport.Width = 334.000000000000000000
+      Viewport.Height = 360.000000000000000000
+    end
+    object Button6: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 144.000000000000000000
+      TabOrder = 3
+      Text = 'Inserindo'
+      Visible = False
+      OnClick = Button6Click
+    end
+    object Button7: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 176.000000000000000000
+      TabOrder = 4
+      Text = 'Atualizando'
+      Visible = False
+      OnClick = Button7Click
+    end
+    object Button8: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 208.000000000000000000
+      TabOrder = 5
+      Text = 'Excluindo'
+      Visible = False
+      OnClick = Button8Click
+    end
+    object Button9: TButton
+      Position.X = 88.000000000000000000
+      Position.Y = 240.000000000000000000
+      TabOrder = 6
+      Text = 'Lendo'
+      Visible = False
+      OnClick = Button9Click
+    end
+  end
+end
