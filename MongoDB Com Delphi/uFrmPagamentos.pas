@@ -1,4 +1,4 @@
-unit uFrmCadastroProfissionais;
+unit uFrmPagamentos;
 
 interface
 
@@ -13,29 +13,24 @@ uses
   mongo.FMX.Edit;
 
 type
-  TfrmCadastroProfissionais = class(TfrmCadastroPadrao)
+  TfrmCadastroPagamentos = class(TfrmCadastroPadrao)
     ListBoxItem2: TListBoxItem;
+    ListBoxItem3: TListBoxItem;
+    ListBoxItem4: TListBoxItem;
     Label3: TLabel;
     EditMongo1: TMongoEdit;
-    ListBoxItem3: TListBoxItem;
     Label2: TLabel;
-    EditMongo2: TMongoEdit;
-    ListBoxItem4: TListBoxItem;
-    Label4: TLabel;
-    EditMongo3: TMongoEdit;
-    ListBoxItem5: TListBoxItem;
-    Label5: TLabel;
-    EditMongo4: TMongoEdit;
+    MongoEdit1: TMongoEdit;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
+    procedure fnc_montarGrid; override;
   public
     { Public declarations }
-    procedure fnc_montarGrid; override;
   end;
 
 var
-  frmCadastroProfissionais: TfrmCadastroProfissionais;
+  frmCadastroPagamentos: TfrmCadastroPagamentos;
 
 implementation
 
@@ -44,17 +39,18 @@ uses
 
 {$R *.fmx}
 
-procedure TfrmCadastroProfissionais.FormCreate(Sender: TObject);
+procedure TfrmCadastroPagamentos.fnc_montarGrid;
 begin
-  Self.Banco := 'SALAO';
-  Self.Collection := 'PROFISSIONAIS';
+   TUtilsView.fnc_montarGrid(ListBox1, dsMongo, 'Codigo', 'Descricao');
   inherited;
 end;
 
-procedure TfrmCadastroProfissionais.fnc_montarGrid;
+procedure TfrmCadastroPagamentos.FormCreate(Sender: TObject);
 begin
-  TUtilsView.fnc_montarGrid(ListBox1, dsMongo, 'Codigo', 'Nome');
+  Self.Banco := 'SALAO';
+  Self.Collection := 'PAGAMENTOS';
   inherited;
+
 end;
 
 end.

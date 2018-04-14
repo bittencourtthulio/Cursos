@@ -41,22 +41,12 @@ implementation
 
 {$R *.fmx}
 
+uses Classes.Utils.View;
+
 
 procedure TfrmClientes.fnc_montarGrid;
-var
-  LBItem    : TListBoxItem;
 begin
-  inherited;
-  with dsMongo do
-  begin
-    First;
-    ListBox1.Items.Clear;
-    while not Eof do
-    begin
-      ListBox1.Items.AddObject(FieldByName('Nome').AsString, TObject(FieldByName('Codigo').AsInteger));
-      Next;
-    end;
-  end;
+  TUtilsView.fnc_montarGrid(ListBox1, dsMongo, 'Codigo', 'Nome');
   inherited;
 end;
 

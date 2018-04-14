@@ -1,0 +1,123 @@
+inherited frmCadastroPagamentos: TfrmCadastroPagamentos
+  Caption = 'frmCadastroPadrao1'
+  DesignerMasterStyle = 0
+  inherited Layout1: TLayout
+    inherited ToolBar1: TToolBar
+      inherited Label1: TLabel
+        Text = 'Pagamentos'
+      end
+    end
+    inherited TabControl1: TTabControl
+      TabIndex = 1
+      Sizes = (
+        674s
+        333s
+        674s
+        333s)
+      inherited tabLista: TTabItem
+        IsSelected = False
+        ExplicitSize.cx = 62.000000000000000000
+        ExplicitSize.cy = 23.000000000000000000
+        inherited ListBox1: TListBox
+          Viewport.Width = 670.000000000000000000
+          Viewport.Height = 289.000000000000000000
+          inherited ListBoxItem1: TListBoxItem
+            Text = ''
+          end
+          object ListBoxItem2: TListBoxItem [1]
+            Position.Y = 40.000000000000000000
+            Size.Width = 670.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+      end
+      inherited tabCadastro: TTabItem
+        IsSelected = True
+        ExplicitSize.cx = 85.000000000000000000
+        ExplicitSize.cy = 23.000000000000000000
+        inherited ListBox2: TListBox
+          Viewport.Width = 670.000000000000000000
+          Viewport.Height = 329.000000000000000000
+          object ListBoxItem3: TListBoxItem
+            Size.Width = 670.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label3: TLabel
+              Align = Left
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              Text = 'C'#243'digo:'
+              TabOrder = 2
+            end
+            object EditMongo1: TMongoEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 530.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              MongoTipoCampo = Numerico
+              MongoCampo = 'CODIGO'
+              AutoInc = True
+              CampoChave = True
+            end
+          end
+          object ListBoxItem4: TListBoxItem
+            Position.Y = 50.000000000000000000
+            Size.Width = 670.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label2: TLabel
+              Align = Left
+              StyledSettings = [Family, Style, FontColor]
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 120.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.Size = 16.000000000000000000
+              Text = 'Descri'#231#227'o:'
+              TabOrder = 3
+            end
+            object MongoEdit1: TMongoEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Margins.Bottom = 5.000000000000000000
+              Size.Width = 530.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              MongoCampo = 'DESCRICAO'
+              AutoInc = True
+              CampoChave = True
+            end
+          end
+        end
+      end
+    end
+  end
+end

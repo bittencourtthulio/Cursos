@@ -27,7 +27,7 @@ inherited frmCadastroProfissionais: TfrmCadastroProfissionais
             Size.Width = 674.000000000000000000
           end
           inherited SearchBox1: TSearchBox
-            Size.Width = 678.000000000000000000
+            Size.Width = 674.000000000000000000
           end
         end
       end

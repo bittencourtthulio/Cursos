@@ -27,6 +27,7 @@ type
     layoutMensagem: TLayout;
     Timer1: TTimer;
     ListBoxItem5: TListBoxItem;
+    ListBoxItem6: TListBoxItem;
     procedure Action1Execute(Sender: TObject);
     procedure ListBoxItem2Click(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
@@ -35,6 +36,7 @@ type
     procedure Timer1Timer(Sender: TObject);
     procedure ListBoxItem3Click(Sender: TObject);
     procedure ListBoxItem5Click(Sender: TObject);
+    procedure ListBoxItem6Click(Sender: TObject);
   private
     FFormAtual: TCommonCustomForm;
     { Private declarations }
@@ -52,7 +54,8 @@ implementation
 
 {$R *.fmx}
 
-uses uFrmCadastroServicos, uFrmCadastroClientes, uFrmCadastroProfissionais;
+uses uFrmCadastroServicos, uFrmCadastroClientes, uFrmCadastroProfissionais,
+  uFrmPagamentos;
 
 procedure TfrmPrincipal.Action1Execute(Sender: TObject);
 var
@@ -134,6 +137,19 @@ begin
 
   Self.layoutPrincipal.RemoveObject(0);
   Self.layoutPrincipal.AddObject(FormProfissionais.Layout1);
+
+end;
+
+procedure TfrmPrincipal.ListBoxItem6Click(Sender: TObject);
+var
+  FormPagamentos : TfrmCadastroPagamentos;
+begin
+
+  if not Assigned(FormPagamentos) then
+    FormPagamentos := TfrmCadastroPagamentos.Create(Self);
+
+  Self.layoutPrincipal.RemoveObject(0);
+  Self.layoutPrincipal.AddObject(FormPagamentos.Layout1);
 
 end;
 

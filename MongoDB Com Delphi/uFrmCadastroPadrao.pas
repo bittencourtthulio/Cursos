@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
   Data.DB, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
   FireDAC.Phys.MongoDBDataSet, FireDAC.Stan.Async, FireDAC.DApt,
-  uFrmMensagensPadrao, mongo.FMX.Edit;
+  uFrmMensagensPadrao, mongo.FMX.Edit, Classes.Utils.View;
 
 type
 		TAcao = (tpInsert, tpUpdate, tpLista);
@@ -57,10 +57,10 @@ type
     FBanco: String;
     FAcao: TAcao;
     FCollection: String;
+    FUtils: TUtilsView;
     procedure fnc_PreencheMongoDoc(var MongoDoc : TMongoDocument);
     procedure fnc_PreencherMongoUpd(var MongoUpd : TMongoUpdate);
     procedure fnc_limparCampos;
-    procedure fnc_carregarDataSet;
     procedure fnc_atualizaLista;
     procedure fnc_gerenciarForms;
     procedure fnc_buscarCampoChave(var i: Integer; const Item: TListBoxItem);
@@ -68,6 +68,7 @@ type
     procedure fnc_excluirRegistro;
     procedure fnc_ExibirMensagem(Tit, Msg : String; tpMsg : TTipoMensagem);
     procedure fnc_exibirBotoes;
+    procedure SetUtils(const Value: TUtilsView);
     { Private declarations }
   public
     { Public declarations }
@@ -76,6 +77,7 @@ type
     property Acao : TAcao read FAcao write FAcao;
     property Banco : String read FBanco write FBanco;
     property Collection : String read FCollection write FCollection;
+    property Utils : TUtilsView read FUtils write SetUtils;
   end;
 
 var
@@ -170,7 +172,7 @@ end;
 
 procedure TfrmCadastroPadrao.fnc_atualizaLista;
 begin
-  fnc_carregarDataSet;
+  Utils.fnc_carregarDataSet(FBanco, FCollection, dsMongo);
   fnc_montarGrid;
 end;
 
@@ -263,19 +265,6 @@ begin
   btnSalvar.Align := TAlignLayout(3);
 end;
 
-procedure TfrmCadastroPadrao.fnc_carregarDataSet;
-var
-  oCrs: IMongoCursor;
-begin
-   with dmDados do
-  begin
-    oCrs := FConMongo[FBANCO][FCollection].Find();
-    dsMongo.Close;
-    dsMongo.Cursor := oCrs;
-    dsMongo.Open;
-  end;
-end;
-
 procedure TfrmCadastroPadrao.fnc_limparCampos;
 var
   i: Integer;
@@ -357,8 +346,7 @@ end;
 
 procedure TfrmCadastroPadrao.FormCreate(Sender: TObject);
 begin
-
-  //Funcao para Destruir Forms Anteriores
+  FUtils := TUtilsView.Create;
   fnc_gerenciarForms;
 
   TabControl1.TabIndex := 0;
@@ -370,6 +358,7 @@ end;
 
 procedure TfrmCadastroPadrao.FormDestroy(Sender: TObject);
 begin
+  FUtils.Free;
   dsMongo.Close;
 end;
 
@@ -383,6 +372,11 @@ begin
   fnc_PreencherRegistros;
   changeTabCadastro.ExecuteTarget(Self);
   fnc_exibirBotoes;
+end;
+
+procedure TfrmCadastroPadrao.SetUtils(const Value: TUtilsView);
+begin
+  FUtils := Value;
 end;
 
 end.

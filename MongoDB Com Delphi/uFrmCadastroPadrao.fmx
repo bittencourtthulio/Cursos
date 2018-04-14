@@ -35,7 +35,6 @@ object frmCadastroPadrao: TfrmCadastroPadrao
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 1
-        Visible = True
       end
       object btnSalvar: TButton
         Action = acSalvar
@@ -47,7 +46,6 @@ object frmCadastroPadrao: TfrmCadastroPadrao
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 4
-        Visible = True
       end
       object btnExcluir: TButton
         Action = acExcluir
@@ -59,7 +57,6 @@ object frmCadastroPadrao: TfrmCadastroPadrao
         Size.Height = 52.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 5
-        Visible = True
       end
       object btnVoltar: TButton
         Action = acVoltar
@@ -71,7 +68,6 @@ object frmCadastroPadrao: TfrmCadastroPadrao
         Size.PlatformDefault = False
         StyleLookup = 'priortoolbutton'
         TabOrder = 7
-        Visible = True
       end
     end
     object ToolBar1: TToolBar

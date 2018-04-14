@@ -155,8 +155,8 @@ inherited frmCadastroServico: TfrmCadastroServico
       Size.PlatformDefault = False
       TabOrder = 2
       Visible = False
-      Viewport.Width = 334.000000000000000000
-      Viewport.Height = 360.000000000000000000
+      Viewport.Width = 330.000000000000000000
+      Viewport.Height = 356.000000000000000000
     end
     object Button6: TButton
       Position.X = 88.000000000000000000
@@ -164,7 +164,6 @@ inherited frmCadastroServico: TfrmCadastroServico
       TabOrder = 3
       Text = 'Inserindo'
       Visible = False
-      OnClick = Button6Click
     end
     object Button7: TButton
       Position.X = 88.000000000000000000
@@ -172,7 +171,6 @@ inherited frmCadastroServico: TfrmCadastroServico
       TabOrder = 4
       Text = 'Atualizando'
       Visible = False
-      OnClick = Button7Click
     end
     object Button8: TButton
       Position.X = 88.000000000000000000
@@ -180,7 +178,6 @@ inherited frmCadastroServico: TfrmCadastroServico
       TabOrder = 5
       Text = 'Excluindo'
       Visible = False
-      OnClick = Button8Click
     end
     object Button9: TButton
       Position.X = 88.000000000000000000
@@ -188,7 +185,6 @@ inherited frmCadastroServico: TfrmCadastroServico
       TabOrder = 6
       Text = 'Lendo'
       Visible = False
-      OnClick = Button9Click
     end
   end
 end

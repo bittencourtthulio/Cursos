@@ -2,8 +2,8 @@ object frmFaturamento: TfrmFaturamento
   Left = 0
   Top = 0
   Caption = 'frmFaturamento'
-  ClientHeight = 442
-  ClientWidth = 640
+  ClientHeight = 584
+  ClientWidth = 840
   StyleBook = frmPrincipal.StyleBook1
   FormFactor.Width = 320
   FormFactor.Height = 480
@@ -12,32 +12,32 @@ object frmFaturamento: TfrmFaturamento
   DesignerMasterStyle = 0
   object Layout1: TLayout
     Align = Contents
-    Size.Width = 640.000000000000000000
-    Size.Height = 442.000000000000000000
+    Size.Width = 840.000000000000000000
+    Size.Height = 584.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object TabControl1: TTabControl
       Align = Client
-      Size.Width = 640.000000000000000000
-      Size.Height = 344.000000000000000000
+      Size.Width = 840.000000000000000000
+      Size.Height = 486.000000000000000000
       Size.PlatformDefault = False
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 0
       TabPosition = PlatformDefault
       Sizes = (
-        636s
-        317s
-        636s
-        317s
-        636s
-        317s
-        636s
-        317s)
+        836s
+        459s
+        836s
+        459s
+        836s
+        459s
+        836s
+        459s)
       object tabFaturamento: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 105.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
@@ -48,7 +48,7 @@ object frmFaturamento: TfrmFaturamento
         ExplicitSize.cy = 23.000000000000000000
         object ListBox1: TListBox
           Align = Top
-          Size.Width = 636.000000000000000000
+          Size.Width = 836.000000000000000000
           Size.Height = 161.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 3
@@ -57,14 +57,14 @@ object frmFaturamento: TfrmFaturamento
           DefaultItemStyles.ItemStyle = ''
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 632.000000000000000000
+          Viewport.Width = 832.000000000000000000
           Viewport.Height = 157.000000000000000000
           object ListBoxItem1: TListBoxItem
             Padding.Left = 5.000000000000000000
             Padding.Top = 5.000000000000000000
             Padding.Right = 5.000000000000000000
             Padding.Bottom = 5.000000000000000000
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 0
@@ -80,7 +80,7 @@ object frmFaturamento: TfrmFaturamento
             end
             object SpeedButton1: TSpeedButton
               Align = Right
-              Position.X = 547.000000000000000000
+              Position.X = 747.000000000000000000
               Position.Y = 5.000000000000000000
               Size.Width = 80.000000000000000000
               Size.Height = 40.000000000000000000
@@ -90,7 +90,7 @@ object frmFaturamento: TfrmFaturamento
             end
             object lblCliente: TLabel
               Align = Client
-              Size.Width = 422.000000000000000000
+              Size.Width = 622.000000000000000000
               Size.Height = 40.000000000000000000
               Size.PlatformDefault = False
             end
@@ -101,7 +101,7 @@ object frmFaturamento: TfrmFaturamento
             Padding.Right = 5.000000000000000000
             Padding.Bottom = 5.000000000000000000
             Position.Y = 50.000000000000000000
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 2
@@ -117,13 +117,13 @@ object frmFaturamento: TfrmFaturamento
             end
             object lblProfissional: TLabel
               Align = Client
-              Size.Width = 422.000000000000000000
+              Size.Width = 622.000000000000000000
               Size.Height = 40.000000000000000000
               Size.PlatformDefault = False
             end
             object SpeedButton2: TSpeedButton
               Align = Right
-              Position.X = 547.000000000000000000
+              Position.X = 747.000000000000000000
               Position.Y = 5.000000000000000000
               Size.Width = 80.000000000000000000
               Size.Height = 40.000000000000000000
@@ -138,7 +138,7 @@ object frmFaturamento: TfrmFaturamento
             Padding.Right = 5.000000000000000000
             Padding.Bottom = 5.000000000000000000
             Position.Y = 100.000000000000000000
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 50.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 1
@@ -154,7 +154,7 @@ object frmFaturamento: TfrmFaturamento
             end
             object SpeedButton3: TSpeedButton
               Align = Right
-              Position.X = 547.000000000000000000
+              Position.X = 747.000000000000000000
               Position.Y = 5.000000000000000000
               Size.Width = 80.000000000000000000
               Size.Height = 40.000000000000000000
@@ -164,36 +164,384 @@ object frmFaturamento: TfrmFaturamento
             end
           end
         end
-        object ListBox2: TListBox
+        object TabControl2: TTabControl
           Align = Client
-          Size.Width = 636.000000000000000000
-          Size.Height = 156.000000000000000000
+          Size.Width = 836.000000000000000000
+          Size.Height = 298.000000000000000000
           Size.PlatformDefault = False
+          TabIndex = 1
           TabOrder = 4
-          DisableFocusEffect = True
-          ItemHeight = 30.000000000000000000
-          DefaultItemStyles.ItemStyle = ''
-          DefaultItemStyles.GroupHeaderStyle = ''
-          DefaultItemStyles.GroupFooterStyle = ''
-          Viewport.Width = 632.000000000000000000
-          Viewport.Height = 127.000000000000000000
-          object ListBoxHeader1: TListBoxHeader
-            Padding.Left = 5.000000000000000000
-            Padding.Top = 5.000000000000000000
-            Padding.Right = 5.000000000000000000
-            Padding.Bottom = 5.000000000000000000
-            Size.Width = 632.000000000000000000
-            Size.Height = 25.000000000000000000
+          TabPosition = PlatformDefault
+          Sizes = (
+            832s
+            271s
+            832s
+            271s)
+          object TabItem1: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 69.000000000000000000
+            Size.Height = 23.000000000000000000
             Size.PlatformDefault = False
+            StyleLookup = ''
             TabOrder = 0
-            object Label5: TLabel
-              Align = Left
-              Position.X = 5.000000000000000000
-              Position.Y = 5.000000000000000000
-              Size.Width = 120.000000000000000000
-              Size.Height = 15.000000000000000000
+            Text = 'TabItem1'
+            object lbServicoFatura: TListBox
+              Align = Client
+              Size.Width = 832.000000000000000000
+              Size.Height = 271.000000000000000000
               Size.PlatformDefault = False
-              Text = 'Servi'#231'os Faturados'
+              StyleLookup = 'ListBox2Style1'
+              TabOrder = 4
+              DisableFocusEffect = True
+              ItemHeight = 60.000000000000000000
+              DefaultItemStyles.ItemStyle = ''
+              DefaultItemStyles.GroupHeaderStyle = ''
+              DefaultItemStyles.GroupFooterStyle = ''
+              Viewport.Width = 828.000000000000000000
+              Viewport.Height = 242.000000000000000000
+              object ListBoxItem4: TListBoxItem
+                Size.Width = 828.000000000000000000
+                Size.Height = 60.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'ListBoxItemServico'
+                TabOrder = 0
+                Text = 'ListBoxItem4'
+              end
+              object ListBoxHeader1: TListBoxHeader
+                Padding.Left = 5.000000000000000000
+                Padding.Top = 5.000000000000000000
+                Padding.Right = 5.000000000000000000
+                Padding.Bottom = 5.000000000000000000
+                Size.Width = 828.000000000000000000
+                Size.Height = 25.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object Label5: TLabel
+                  Align = Left
+                  Position.X = 5.000000000000000000
+                  Position.Y = 5.000000000000000000
+                  Size.Width = 120.000000000000000000
+                  Size.Height = 15.000000000000000000
+                  Size.PlatformDefault = False
+                  Text = 'Servi'#231'os Faturados'
+                end
+              end
+            end
+          end
+          object tabPagamentos: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 103.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'tabPagamentos'
+            object Layout2: TLayout
+              Align = Right
+              Position.X = 456.000000000000000000
+              Size.Width = 376.000000000000000000
+              Size.Height = 271.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object lbPagamentos: TListBox
+                Align = Client
+                Size.Width = 376.000000000000000000
+                Size.Height = 200.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                DisableFocusEffect = True
+                ItemHeight = 60.000000000000000000
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 372.000000000000000000
+                Viewport.Height = 171.000000000000000000
+                object ListBoxItem5: TListBoxItem
+                  Size.Width = 372.000000000000000000
+                  Size.Height = 60.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  Text = 'ListBoxItem5'
+                end
+                object ListBoxHeader2: TListBoxHeader
+                  Size.Width = 372.000000000000000000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Label7: TLabel
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Size.Width = 367.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Selecionar Pagamentos'
+                    TabOrder = 1
+                  end
+                end
+              end
+              object ListBox3: TListBox
+                Align = Bottom
+                Position.Y = 200.000000000000000000
+                Size.Width = 376.000000000000000000
+                Size.Height = 71.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                DisableFocusEffect = True
+                ItemHeight = 60.000000000000000000
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 372.000000000000000000
+                Viewport.Height = 67.000000000000000000
+                object ListBoxItem6: TListBoxItem
+                  Size.Width = 372.000000000000000000
+                  Size.Height = 60.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object edtValorPago: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 0
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 282.000000000000000000
+                    Size.Height = 50.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                  object SpeedButton5: TSpeedButton
+                    Align = Right
+                    Position.X = 292.000000000000000000
+                    Size.Width = 80.000000000000000000
+                    Size.Height = 60.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'additembutton'
+                    Text = 'SpeedButton5'
+                    OnClick = SpeedButton5Click
+                  end
+                end
+              end
+            end
+            object Layout3: TLayout
+              Align = Client
+              Size.Width = 456.000000000000000000
+              Size.Height = 271.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object ListBox4: TListBox
+                Align = Bottom
+                Position.Y = 80.000000000000000000
+                Size.Width = 456.000000000000000000
+                Size.Height = 191.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                DisableFocusEffect = True
+                ItemHeight = 40.000000000000000000
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 452.000000000000000000
+                Viewport.Height = 162.000000000000000000
+                object ListBoxItem7: TListBoxItem
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Label9: TLabel
+                    Align = Left
+                    StyledSettings = [Family, Style, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Position.X = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Text = 'SubTotal'
+                    TabOrder = 1
+                  end
+                  object Label13: TLabel
+                    Align = Right
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Position.X = 243.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.HorzAlign = Trailing
+                    Text = 'R$ 0,00'
+                    TabOrder = 0
+                  end
+                end
+                object ListBoxItem8: TListBoxItem
+                  Position.Y = 40.000000000000000000
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object Label10: TLabel
+                    Align = Left
+                    StyledSettings = [Family, Style, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Position.X = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Text = 'Acrescimo'
+                    TabOrder = 1
+                  end
+                  object Label14: TLabel
+                    Align = Right
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Position.X = 243.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.HorzAlign = Trailing
+                    Text = 'R$ 0,00'
+                    TabOrder = 0
+                  end
+                end
+                object ListBoxItem9: TListBoxItem
+                  Position.Y = 80.000000000000000000
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 2
+                  object Label11: TLabel
+                    Align = Left
+                    StyledSettings = [Family, Style, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Position.X = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Text = 'Desconto'
+                    TabOrder = 1
+                  end
+                  object Label15: TLabel
+                    Align = Right
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Position.X = 243.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.HorzAlign = Trailing
+                    Text = 'R$ 0,00'
+                    TabOrder = 0
+                  end
+                end
+                object ListBoxItem10: TListBoxItem
+                  Position.Y = 120.000000000000000000
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 40.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 3
+                  object lbTextTrocoFalta: TLabel
+                    Align = Left
+                    StyledSettings = [Family, Style, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Position.X = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Text = 'Troco/Falta'
+                    TabOrder = 1
+                  end
+                  object lbTrocoFalta: TLabel
+                    Align = Right
+                    StyledSettings = [Family]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Position.X = 243.000000000000000000
+                    Position.Y = 5.000000000000000000
+                    Size.Width = 204.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00070000000000000004000000}
+                    TextSettings.FontColor = claGreenyellow
+                    TextSettings.HorzAlign = Trailing
+                    Text = 'R$ 0,00'
+                    TabOrder = 0
+                  end
+                end
+                object ListBoxHeader3: TListBoxHeader
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Label8: TLabel
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Size.Width = 447.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Totais'
+                    TabOrder = 0
+                  end
+                end
+              end
+              object lbPagamentoEfetuado: TListBox
+                Align = Client
+                Size.Width = 456.000000000000000000
+                Size.Height = 80.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                DisableFocusEffect = True
+                ItemHeight = 40.000000000000000000
+                DefaultItemStyles.ItemStyle = ''
+                DefaultItemStyles.GroupHeaderStyle = ''
+                DefaultItemStyles.GroupFooterStyle = ''
+                Viewport.Width = 452.000000000000000000
+                Viewport.Height = 51.000000000000000000
+                object ListBoxHeader4: TListBoxHeader
+                  Size.Width = 452.000000000000000000
+                  Size.Height = 25.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object Label17: TLabel
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Size.Width = 447.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'Pagamentos'
+                    TabOrder = 0
+                  end
+                end
+              end
             end
           end
         end
@@ -202,7 +550,7 @@ object frmFaturamento: TfrmFaturamento
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 74.000000000000000000
         Size.Height = 23.000000000000000000
         Size.PlatformDefault = False
@@ -213,8 +561,8 @@ object frmFaturamento: TfrmFaturamento
         ExplicitSize.cy = 23.000000000000000000
         object lbCliente: TListBox
           Align = Client
-          Size.Width = 636.000000000000000000
-          Size.Height = 317.000000000000000000
+          Size.Width = 836.000000000000000000
+          Size.Height = 459.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           DisableFocusEffect = True
@@ -223,13 +571,13 @@ object frmFaturamento: TfrmFaturamento
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           OnItemClick = lbClienteItemClick
-          Viewport.Width = 632.000000000000000000
-          Viewport.Height = 273.000000000000000000
+          Viewport.Width = 832.000000000000000000
+          Viewport.Height = 415.000000000000000000
           object SearchBox1: TSearchBox
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Align = Top
             TabOrder = 0
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
           end
@@ -250,8 +598,8 @@ object frmFaturamento: TfrmFaturamento
         ExplicitSize.cy = 23.000000000000000000
         object lbProfissional: TListBox
           Align = Client
-          Size.Width = 636.000000000000000000
-          Size.Height = 317.000000000000000000
+          Size.Width = 836.000000000000000000
+          Size.Height = 459.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           DisableFocusEffect = True
@@ -260,13 +608,13 @@ object frmFaturamento: TfrmFaturamento
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           OnItemClick = lbProfissionalItemClick
-          Viewport.Width = 632.000000000000000000
-          Viewport.Height = 273.000000000000000000
+          Viewport.Width = 832.000000000000000000
+          Viewport.Height = 415.000000000000000000
           object SearchBox2: TSearchBox
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Align = Top
             TabOrder = 0
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
           end
@@ -287,8 +635,8 @@ object frmFaturamento: TfrmFaturamento
         ExplicitSize.cy = 23.000000000000000000
         object lbServico: TListBox
           Align = Client
-          Size.Width = 636.000000000000000000
-          Size.Height = 317.000000000000000000
+          Size.Width = 836.000000000000000000
+          Size.Height = 459.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 0
           DisableFocusEffect = True
@@ -297,13 +645,13 @@ object frmFaturamento: TfrmFaturamento
           DefaultItemStyles.GroupHeaderStyle = ''
           DefaultItemStyles.GroupFooterStyle = ''
           OnItemClick = lbServicoItemClick
-          Viewport.Width = 632.000000000000000000
-          Viewport.Height = 273.000000000000000000
+          Viewport.Width = 832.000000000000000000
+          Viewport.Height = 415.000000000000000000
           object SearchBox3: TSearchBox
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             Align = Top
             TabOrder = 0
-            Size.Width = 632.000000000000000000
+            Size.Width = 832.000000000000000000
             Size.Height = 40.000000000000000000
             Size.PlatformDefault = False
           end
@@ -311,7 +659,7 @@ object frmFaturamento: TfrmFaturamento
       end
     end
     object ToolBar1: TToolBar
-      Size.Width = 640.000000000000000000
+      Size.Width = 840.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
@@ -329,19 +677,19 @@ object frmFaturamento: TfrmFaturamento
     end
     object ToolBar2: TToolBar
       Align = Bottom
-      Position.Y = 384.000000000000000000
-      Size.Width = 640.000000000000000000
+      Position.Y = 526.000000000000000000
+      Size.Width = 840.000000000000000000
       Size.Height = 58.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      object Label6: TLabel
+      object lblValorTotal: TLabel
         Align = Right
         StyledSettings = [Family, Style, FontColor]
         Margins.Left = 10.000000000000000000
         Margins.Top = 10.000000000000000000
         Margins.Right = 10.000000000000000000
         Margins.Bottom = 10.000000000000000000
-        Position.X = 360.000000000000000000
+        Position.X = 560.000000000000000000
         Position.Y = 10.000000000000000000
         Size.Width = 270.000000000000000000
         Size.Height = 38.000000000000000000
@@ -359,11 +707,31 @@ object frmFaturamento: TfrmFaturamento
         Text = 'SpeedButton4'
         OnClick = SpeedButton4Click
       end
+      object btnPagamentos: TSpeedButton
+        Align = Left
+        Position.X = 80.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'nexttoolbutton'
+        Text = 'SpeedButton4'
+        OnClick = btnPagamentosClick
+      end
+      object btnFinalizar: TSpeedButton
+        Align = Right
+        Position.X = 470.000000000000000000
+        Size.Width = 80.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'organizetoolbuttonbordered'
+        Text = 'SpeedButton4'
+        OnClick = btnFinalizarClick
+      end
     end
   end
   object ActionList1: TActionList
-    Left = 18
-    Top = 258
+    Left = 450
+    Top = 130
     object changeCliente: TChangeTabAction
       Category = 'Tab'
       Tab = tabCliente
@@ -380,5 +748,14 @@ object frmFaturamento: TfrmFaturamento
       Category = 'Tab'
       Tab = tabServico
     end
+    object ChangeTabPagamentos: TChangeTabAction
+      Category = 'Tab'
+      Tab = tabPagamentos
+    end
+  end
+  object dsMongoGenerico: TFDMongoDataSet
+    Connection = dmDados.FDConnection1
+    Left = 530
+    Top = 138
   end
 end
