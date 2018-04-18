@@ -48,10 +48,9 @@ type
     changeFaturamento: TChangeTabAction;
     changeProfissional: TChangeTabAction;
     changeServico: TChangeTabAction;
-    SpeedButton4: TSpeedButton;
     dsMongoGenerico: TFDMongoDataSet;
     TabControl2: TTabControl;
-    TabItem1: TTabItem;
+    tabServicosFaturados: TTabItem;
     tabPagamentos: TTabItem;
     lbServicoFatura: TListBox;
     ListBoxItem4: TListBoxItem;
@@ -85,9 +84,24 @@ type
     lbPagamentoEfetuado: TListBox;
     ListBoxHeader4: TListBoxHeader;
     Label17: TLabel;
-    btnPagamentos: TSpeedButton;
     ChangeTabPagamentos: TChangeTabAction;
-    btnFinalizar: TSpeedButton;
+    Layout4: TLayout;
+    ListBox2: TListBox;
+    ListBoxHeader5: TListBoxHeader;
+    ListBoxItem12: TListBoxItem;
+    ListBoxItem13: TListBoxItem;
+    ListBoxItem14: TListBoxItem;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    ListBox5: TListBox;
+    Layout5: TLayout;
+    ListBoxHeader6: TListBoxHeader;
+    ListBoxItem11: TListBoxItem;
+    Button4: TButton;
+    ListBoxItem15: TListBoxItem;
+    Button5: TButton;
+    changeServicosFaturados: TChangeTabAction;
     procedure FormCreate(Sender: TObject);
     procedure ListBoxItem1Click(Sender: TObject);
     procedure ListBoxItem2Click(Sender: TObject);
@@ -101,7 +115,11 @@ type
     procedure SpeedButton4Click(Sender: TObject);
     procedure btnPagamentosClick(Sender: TObject);
     procedure SpeedButton5Click(Sender: TObject);
-    procedure btnFinalizarClick(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Button5Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     FCodCliente: Integer;
     FCodProfissional: Integer;
@@ -112,6 +130,7 @@ type
     procedure fnc_exibirTrocoFalta;
     function GetPagamentosEfetuados: Currency;
     procedure GravarVenda;
+    procedure LimparVenda;
     procedure fnc_PreencheMongoDoc(MongoDoc : TMongoDocument);
     { Private declarations }
   public
@@ -137,17 +156,46 @@ begin
   lblValorTotal.Text := FormatCurr('R$ #,##0.00', ValorTotal);
 end;
 
-procedure TfrmFaturamento.btnFinalizarClick(Sender: TObject);
-begin
-  GravarVenda;
-end;
-
 procedure TfrmFaturamento.btnPagamentosClick(Sender: TObject);
 begin
   TUtilsView.fnc_carregarDataSet('SALAO', 'PAGAMENTOS', dsMongoGenerico);
   TUtilsView.fnc_montarGrid(lbPagamentos, dsMongoGenerico, 'CODIGO', 'DESCRICAO');
 
   ChangeTabPagamentos.ExecuteTarget(Self);
+end;
+
+procedure TfrmFaturamento.Button1Click(Sender: TObject);
+begin
+  if lbServicoFatura.ItemIndex >= 0 then
+    lbServicoFatura.Items.Delete(lbServicoFatura.ItemIndex);
+  lblValorTotal.Text := FormatCurr('R$ #,##0.00', ValorTotal);
+end;
+
+procedure TfrmFaturamento.Button2Click(Sender: TObject);
+begin
+  TUtilsView.fnc_carregarDataSet('SALAO', 'SERVICOS', dsMongoGenerico);
+  TUtilsView.fnc_montarGrid(lbServico, dsMongoGenerico, 'DESCRICAO', 'CODIGO', 'VALOR');
+  changeServico.ExecuteTarget(Self);
+end;
+
+procedure TfrmFaturamento.Button3Click(Sender: TObject);
+begin
+  TUtilsView.fnc_carregarDataSet('SALAO', 'PAGAMENTOS', dsMongoGenerico);
+  TUtilsView.fnc_montarGrid(lbPagamentos, dsMongoGenerico, 'CODIGO', 'DESCRICAO');
+  ChangeTabPagamentos.ExecuteTarget(Self);
+end;
+
+procedure TfrmFaturamento.Button4Click(Sender: TObject);
+begin
+  if lbPagamentoEfetuado.ItemIndex >= 0 then
+    lbPagamentoEfetuado.Items.Delete(lbPagamentoEfetuado.ItemIndex);
+  fnc_exibirTrocoFalta;
+end;
+
+procedure TfrmFaturamento.Button5Click(Sender: TObject);
+begin
+  GravarVenda;
+  LimparVenda;
 end;
 
 procedure TfrmFaturamento.fnc_exibirTrocoFalta;
@@ -167,6 +215,7 @@ begin
   begin
     lbTextTrocoFalta.Text := 'Falta';
     lbTrocoFalta.FontColor := TAlphaColors.Red;
+    Layout2.Visible := true;
   end;
 
   lbTrocoFalta.Text := FormatCurr('R$ #,##0.00', ValorRestante);
@@ -223,6 +272,9 @@ begin
   //Seta a primeira tab e esconde as abas
   TabControl1.TabIndex := 0;
   TabControl1.TabPosition := TabControl1.TabPosition.tpNone;
+
+  TabControl2.TabIndex := 0;
+  TabControl2.TabPosition := TabControl2.TabPosition.tpNone;
   lbServicoFatura.Items.Clear;
 end;
 
@@ -282,6 +334,20 @@ procedure TfrmFaturamento.lbServicoItemClick(const Sender: TCustomListBox;
 begin
   addItemFaturado;
   changeFaturamento.ExecuteTarget(Self);
+end;
+
+procedure TfrmFaturamento.LimparVenda;
+begin
+  FCodCliente := -1;
+  FCodProfissional := -1;
+  lblCliente.Text := '';
+  lblProfissional.Text := '';
+  lbServicoFatura.Items.Clear;
+  lbPagamentoEfetuado.Items.Clear;
+  lbTrocoFalta.Text := 'R$ 0,00';
+  lblValorTotal.Text := 'R$ 0,00';
+  changeServicosFaturados.ExecuteTarget(Self);
+  Layout2.Visible := true;
 end;
 
 procedure TfrmFaturamento.ListBoxItem1Click(Sender: TObject);
